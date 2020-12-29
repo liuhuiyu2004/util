@@ -1,6 +1,15 @@
-# util
-My util, Common tools collection
-##导入方法
+# util 简介
+My util, Common tools collection  
+工具集合类
+# 包说明
+|包|说明|  
+|---|---|  
+|asserts|断言|
+|constant.enums|常量枚举|
+|exception|异常|
+|spring|spring工具|
+|web|web工具|
+#导入方法
 1.将项目maven打jar包
 Maven->Util->生命周期->package  
 2.在要引用的项目中建立lib文件夹  

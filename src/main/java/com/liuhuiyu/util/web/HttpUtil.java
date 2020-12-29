@@ -1,5 +1,6 @@
 package com.liuhuiyu.util.web;
 
+import com.liuhuiyu.util.asserts.LhyAssert;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -13,22 +14,16 @@ import javax.servlet.http.HttpServletResponse;
  * Created DateTime 2020-06-23 13:23
  */
 public class HttpUtil {
-    public static @NotNull HttpServletRequest getHttpServletRequest() throws Exception {
+    public static @NotNull HttpServletRequest getHttpServletRequest() {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-        if (null == attributes) {
-            throw new Exception("Spring配置错误");
-        } else {
-            return attributes.getRequest();
-        }
+        LhyAssert.assertNotNull(attributes, "Spring配置错误");
+        return attributes.getRequest();
     }
 
-    public static HttpServletResponse getHttpServletResponse() throws Exception {
+    public static HttpServletResponse getHttpServletResponse() {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-        if (null == attributes) {
-            throw new Exception("Spring配置错误");
-        } else {
-            return attributes.getResponse();
-        }
+        LhyAssert.assertNotNull(attributes, "Spring配置错误");
+        return attributes.getResponse();
     }
 }
 
