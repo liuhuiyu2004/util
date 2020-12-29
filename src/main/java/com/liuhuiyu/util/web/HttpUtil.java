@@ -1,4 +1,4 @@
-package com.liuhuiyu.util;
+package com.liuhuiyu.util.web;
 
 import org.jetbrains.annotations.NotNull;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
  * @version v1.0.0.0
  * Created DateTime 2020-06-23 13:23
  */
-@Deprecated
 public class HttpUtil {
     public static @NotNull HttpServletRequest getHttpServletRequest() throws Exception {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();

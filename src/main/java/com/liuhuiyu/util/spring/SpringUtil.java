@@ -1,4 +1,4 @@
-package com.liuhuiyu.util;
+package com.liuhuiyu.util.spring;
 
 import lombok.extern.log4j.Log4j2;
 import org.jetbrains.annotations.NotNull;
@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Log4j2
-@Deprecated
 public class SpringUtil implements ApplicationContextAware {
     private static ApplicationContext applicationContext;
     @Override
