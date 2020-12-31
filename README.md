@@ -37,3 +37,5 @@ build 标签中加入
     </resource>
 </resources>
 ~~~
+本地仓库安装
+mvn install:install-file -Dfile=util-1.0-SNAPSHOT.jar -DgroupId=com.liuhuiyu -DartifactId=util -Dversion=1.0-SNAPSHOT -Dpackaging=jar
