@@ -53,6 +53,10 @@ public class Result<T> implements Serializable {
         this.msg = msg;
     }
 
+    public boolean isSuccess() {
+        return this.flag.equals(OK);
+    }
+
     /**
      * 通过静态方法获取实例
      */
