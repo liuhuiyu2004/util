@@ -39,6 +39,11 @@ public class LhyException extends RuntimeException {
         this.errId = resultEnum.getCode();
     }
 
+    public LhyException(String message) {
+        super(message);
+        this.errId = 0;
+    }
+
     public Integer getErrId() {
         return errId;
     }
